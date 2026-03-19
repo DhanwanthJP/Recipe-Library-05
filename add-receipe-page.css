@@ -1,0 +1,347 @@
+:root {
+    --cream: #fdf8f2;
+    --paper: #fff9f2;
+    --ink: #1a1208;
+    --ink-soft: #5c4a2a;
+    --accent: #c4622d;
+    --accent-light: #f2e8df;
+    --accent-hover: #a84f22;
+    --green: #3a6b3e;
+    --green-light: #e6f0e7;
+    --border: #e8ddd0;
+    --border-focus: #c4622d;
+    --shadow: 0 4px 24px rgba(26, 18, 8, 0.08);
+    --shadow-card: 0 2px 12px rgba(26, 18, 8, 0.06);
+    --radius: 14px;
+    --radius-sm: 8px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar {
+    display: flex;
+    gap: 10px;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 30px;
+    background-color: #ffc089;
+}
+
+.navbar-s1 {}
+
+.navbar-s2 {
+    display: flex;
+    gap: 20px;
+    color: rgb(59, 59, 59);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    font-size: large;
+}
+
+.header {
+    background-color: rgb(155, 97, 21);
+    height: 100px;
+    padding: 10px;
+    color: white;
+
+}
+
+.header_caption1 {
+    font-size: 30px;
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.main-container {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 40px 24px 60px;
+}
+
+.progress {
+    background: var(--paper);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px 24px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: var(--shadow-card);
+}
+
+.progress-bar-track {
+    height: 5px;
+    flex: 1;
+    background-color: var(--border);
+    border-radius: 90px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    width: 0%;
+    border-radius: 90px;
+    background-color: var(--accent);
+    transition: width 0.4s ease;
+}
+
+.progress-percentage {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--accent);
+    white-space: nowrap;
+}
+
+/* Sections */
+
+/* Recipe Info */
+.section-card {
+    background-color: var(--paper);
+    display: flex;
+    flex-direction: column;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-card);
+    padding: 32px 36px;
+    margin-bottom: 24px;
+    animation: fadeUp 0.4s ease both;
+}
+
+.section-card:nth-child(2) {
+    animation-delay: 0.05s;
+}
+
+.section-card:nth-child(3) {
+    animation-delay: 0.1s;
+}
+
+.section-card:nth-child(4) {
+    animation-delay: 0.15s;
+}
+
+.section-card:nth-child(5) {
+    animation-delay: 0.2s;
+}
+
+.section-card:nth-child(6) {
+    animation-delay: 0.25s;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1.5px solid var(--border);
+}
+
+.section-icon {
+    width: 34px;
+    height: 34px;
+    background: var(--accent-light);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.section-title {
+    /* font-family: sans-serif; */
+    font-size: 1.18rem;
+    font-weight: 700;
+    color: var(--ink);
+}
+
+.section-sub {
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+    font-weight: 400;
+    margin-left: 2px;
+}
+
+.section-number {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--accent);
+    background: var(--accent-light);
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-left: auto;
+}
+
+/* Form Grid */
+.form-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.form-grid-2 {
+    grid-template-columns: 1fr 1fr;
+}
+
+.form-grid-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+/* form field */
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--ink);
+    letter-spacing: 0.2px;
+}
+
+label .required {
+    color: var(--accent);
+    margin-left: 2px;
+}
+
+label .optional {
+    color: var(--ink-soft);
+    font-weight: 400;
+    font-size: 0.78rem;
+    margin-left: 4px;
+}
+
+input,
+textarea,
+select {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.93rem;
+    color: var(--ink);
+    background: var(--cream);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 10px 14px;
+    outline: none;
+    transition: border-color 0.18s, box-shadow 0.18s, background-color 0.18s;
+    width: 100%;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--border-focus);
+    background: white;
+    box-shadow: 0 0 0 2px rgba(196, 98, 45, 0.12);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #b8a898;
+    font-weight: 300;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 88px;
+    line-height: 1.5;
+}
+
+/* Upload image */
+.upload-zone {
+    border: 2px dashed var(--border);
+    border-radius: var(--radius);
+    padding: 32px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.2s, background-color 0.2s;
+    position: relative;
+    background-color: var(--cream);
+}
+
+.upload-zone:hover,
+.upload-zone.dragover {
+    border-color: var(--accent);
+    background-color: var(--accent-light);
+}
+
+.upload-zone input[type="file"] {
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    padding: 0;
+    opacity: 0;
+}
+
+.upload-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.upload-zone p {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    line-height: 1.5;
+}
+
+.upload-zone strong {
+    color: var(--accent);
+}
+
+#image-preview {
+    display: none;
+}
+
+.url-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+    cursor: pointer;
+    width: fit-content;
+}
+
+.url-toggle:hover {
+    color: var(--accent);
+}
+
+#image-url-field {
+    display: none;
+    margin-top: 10px;
+}

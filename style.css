@@ -1,21 +1,26 @@
 * {
     margin: 0;
-    padding: 0;
+    padding: 60;
     font-family: "Gabarito", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    box-sizing: content-box;
+    box-sizing: border-box;
 }
 
+body {
+  padding-top: 60px; 
+}
 .navbar {
-    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
     color: black;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 2px solid black;
     z-index: 1000;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
@@ -45,8 +50,10 @@
     justify-content: center;
     margin: 40px 20px;
 }
+
 .search-bar {
-    position: relative; /* FIX for absolute children */
+    position: relative;
+    /* FIX for absolute children */
 
     display: flex;
     align-items: center;
@@ -59,7 +66,7 @@
     border-radius: 40px;
     background: white;
 
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 .search-input {
@@ -73,7 +80,8 @@
 .search-bar::before {
     content: "";
     position: absolute;
-    inset: -2px; /* important */
+    inset: -2px;
+    /* important */
 
     border-radius: 40px;
 
@@ -85,7 +93,8 @@
     background-size: 200%;
     animation: borderMove 3s linear infinite;
 
-    z-index: -1; /* KEY FIX */
+    z-index: -1;
+    /* KEY FIX */
 }
 
 @keyframes borderMove {
@@ -212,4 +221,172 @@
             rgba(0, 0, 0, 0.2),
             transparent);
     z-index: 1;
+}
+
+.popular-recipe {
+    padding: 50px 60px;
+    gap: 25px;
+}
+
+.popular-recipe-subtitle {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.popular-recipe-subtitle h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.popular-recipe-subtitle p {
+    color: #666;
+    font-size: 16px;
+}
+
+.slider-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.slider {
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background: #ff6b35;
+    color: white;
+    border: none;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    cursor: pointer;
+    z-index: 2;
+}
+
+.slider-btn.left {
+    left: -20px;
+}
+
+.slider-btn.right {
+    right: -20px;
+}
+
+.recipe-card {
+    background: #f5f5f5;
+    border-radius: 15px;
+    overflow: hidden;
+    min-width: calc(100% / 4 - 15px);
+    transition: 0.3s;
+    cursor: pointer;
+    scroll-snap-align: start;
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.recipe-card h3 {
+    font-size: 18px;
+    margin: 12px 15px 15px;
+}
+
+.recipe-card p {
+    font-weight: bold;
+    color: #333;
+    margin: 0 15px 15px;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.recipe-card-btn {
+    display: block;
+    margin: 0 15px 15px;
+    padding: 8px 12px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #ff6b35;
+    color: white;
+    font-size: 14px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.recipe-card-btn:hover {
+    background: #e85a2a;
+}
+
+.featured-chefs {
+    padding: 50px 60px;
+    gap: 25px;
+}
+
+.featured-chefs-subtitle {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.featured-chefs-subtitle h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.featured-chefs-subtitle p {
+    color: #666;
+    font-size: 16px;
+}
+
+.featured-chefs-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.chef-card {
+    background: #f5f5f5;
+    border-radius: 15px;
+    overflow: hidden;
+
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.chef-card img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+}
+
+.chef-card h3 {
+    font-size: 18px;
+    margin: 12px 15px 15px;
+}
+
+.chef-card p {
+    font-weight: bold;
+    color: #333;
+    margin: 0 15px 15px;
+}
+
+.chef-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }

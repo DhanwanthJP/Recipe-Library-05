@@ -1,0 +1,392 @@
+* {
+    margin: 0;
+    padding: 60;
+    font-family: "Gabarito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+body {
+  padding-top: 60px; 
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    color: black;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #ff6347;
+    /* Tomato color on hover */
+}
+
+
+.search-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 40px 20px;
+}
+
+.search-bar {
+    position: relative;
+    /* FIX for absolute children */
+
+    display: flex;
+    align-items: center;
+
+    width: 90%;
+    max-width: 600px;
+
+    padding: 14px 20px 14px 45px;
+
+    border-radius: 40px;
+    background: white;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.search-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: transparent;
+}
+
+.search-bar::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    /* important */
+
+    border-radius: 40px;
+
+    background: linear-gradient(90deg,
+            #ff6b35,
+            #ffb347,
+            #ff6b35);
+
+    background-size: 200%;
+    animation: borderMove 3s linear infinite;
+
+    z-index: -1;
+    /* KEY FIX */
+}
+
+@keyframes borderMove {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 200%;
+    }
+}
+
+.search-bar i {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    font-size: 16px;
+}
+
+.search-bar:hover {
+    box-shadow: 0 10px 25px #ffb347;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.hero-banner {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    display: block;
+}
+
+/* Overlay content */
+.hero-content {
+    position: absolute;
+    top: 50%;
+    right: 60px;
+    /* move to right */
+    left: auto;
+    /* IMPORTANT: remove left */
+    transform: translateY(-50%);
+
+    z-index: 2;
+    color: white;
+    max-width: 500px;
+    text-align: left;
+}
+
+/* Optional: dark overlay for readability */
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+    animation: floatUp 1s ease-out;
+}
+
+@keyframes floatUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(-50%);
+    }
+}
+
+.hero-content-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #ff6b35;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.hero-content-btn:hover {
+    transform: scale(1.05);
+}
+
+.hero-container {
+    width: 90%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.hero {
+    position: relative;
+    height: 70vh;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.hero-banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right,
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.2),
+            transparent);
+    z-index: 1;
+}
+
+.popular-recipe {
+    padding: 50px 60px;
+    gap: 25px;
+}
+
+.popular-recipe-subtitle {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.popular-recipe-subtitle h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.popular-recipe-subtitle p {
+    color: #666;
+    font-size: 16px;
+}
+
+.slider-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.slider {
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background: #ff6b35;
+    color: white;
+    border: none;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    cursor: pointer;
+    z-index: 2;
+}
+
+.slider-btn.left {
+    left: -20px;
+}
+
+.slider-btn.right {
+    right: -20px;
+}
+
+.recipe-card {
+    background: #f5f5f5;
+    border-radius: 15px;
+    overflow: hidden;
+    min-width: calc(100% / 4 - 15px);
+    transition: 0.3s;
+    cursor: pointer;
+    scroll-snap-align: start;
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.recipe-card h3 {
+    font-size: 18px;
+    margin: 12px 15px 15px;
+}
+
+.recipe-card p {
+    font-weight: bold;
+    color: #333;
+    margin: 0 15px 15px;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.recipe-card-btn {
+    display: block;
+    margin: 0 15px 15px;
+    padding: 8px 12px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #ff6b35;
+    color: white;
+    font-size: 14px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.recipe-card-btn:hover {
+    background: #e85a2a;
+}
+
+.featured-chefs {
+    padding: 50px 60px;
+    gap: 25px;
+}
+
+.featured-chefs-subtitle {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.featured-chefs-subtitle h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.featured-chefs-subtitle p {
+    color: #666;
+    font-size: 16px;
+}
+
+.featured-chefs-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.chef-card {
+    background: #f5f5f5;
+    border-radius: 15px;
+    overflow: hidden;
+
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.chef-card img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+}
+
+.chef-card h3 {
+    font-size: 18px;
+    margin: 12px 15px 15px;
+}
+
+.chef-card p {
+    font-weight: bold;
+    color: #333;
+    margin: 0 15px 15px;
+}
+
+.chef-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}

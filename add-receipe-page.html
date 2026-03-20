@@ -7,9 +7,11 @@
     <title>Recipe Library</title>
     <link rel="stylesheet" href="add-receipe-page.css">
     <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
-        rel="stylesheet" />
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DynaPuff:wght@400..700&display=swap"
+        rel="stylesheet">
 
     <!-- Font Awesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
@@ -17,10 +19,10 @@
 </head>
 
 <body>
-    <!-- Navbar -->
+    <!-- Navbar
     <div class="navbar">
         <div class="navbar-s1">
-            <h1>Forkfolio</h1>
+            <h1>Recipe Library</h1>
         </div>
 
         <div class="navbar-s2">
@@ -34,7 +36,7 @@
         </div>
         <div class="navbar-s3">
         </div>
-    </div>
+    </div> -->
 
     <div class="header">
         <p class="header_caption1">Share your recipe with the world</p>
@@ -61,7 +63,7 @@
                     <div class="section-icon"><i class="fa-solid fa-circle-info fa-lg"
                             style="color: rgb(196, 98, 45);"></i></div>
                     <div>
-                        <div class="section-title">Basic Info</div>
+                        <div class="section-title">Recipe Info</div>
                         <div class="section-sub">Name, image and a short description</div>
                     </div>
                     <span class="section-number">01/06</span>
@@ -107,7 +109,8 @@
             <!-- Recipe Classification -->
             <div class="section-card">
                 <div class="section-label">
-                    <div class="section-icon"><i class="fa-solid fa-tag fa-lg" style="color: rgb(196, 98, 45);"></i></div>
+                    <div class="section-icon"><i class="fa-solid fa-tag fa-lg" style="color: rgb(196, 98, 45);"></i>
+                    </div>
                     <div>
                         <div class="section-title">Classification</div>
                         <div class="section-sub">Category, cuisine & meal type</div>
@@ -119,16 +122,14 @@
                     <div class="field" id="field-category">
                         <label>Category <span class="required">*</span></label>
                         <div class="radio-group" id="category-group">
-                            <label class="radio-option" id="opt-veg">
+                            <label class="radio-option radio-veg" id="optional-veg">
                                 <input type="radio" name="category" value="veg" />
                                 <div class="radio-dot"></div>
-                                <span class="radio-emoji">🟢</span>
                                 <span class="radio-label">Vegetarian</span>
                             </label>
-                            <label class="radio-option" id="opt-nonveg">
+                            <label class="radio-option radio-non-veg" id="optional-nonveg">
                                 <input type="radio" name="category" value="non-veg" />
                                 <div class="radio-dot"></div>
-                                <span class="radio-emoji">🔴</span>
                                 <span class="radio-label">Non-Vegetarian</span>
                             </label>
                         </div>
@@ -165,10 +166,11 @@
                 </div>
             </div>
 
-            <!-- ③ COOKING DETAILS -->
+            <!-- Cooking details -->
             <div class="section-card">
                 <div class="section-label">
-                    <div class="section-icon">⏱️</div>
+                    <div class="section-icon"><i class="fa-solid fa-hourglass-start fa-lg"
+                            style="color: rgb(196, 98, 45);"></i></div>
                     <div>
                         <div class="section-title">Cooking Details</div>
                         <div class="section-sub">Time, difficulty & servings</div>
@@ -178,50 +180,51 @@
 
                 <div class="form-grid form-grid-3">
                     <div class="field">
-                        <label for="prep-time">Prep Time <span class="opt">(mins)</span></label>
+                        <label for="prep-time">Prep Time <span class="optional">(mins)</span></label>
                         <input type="number" id="prep-time" name="prep-time" placeholder="15" min="0" />
                     </div>
 
                     <div class="field" id="field-cook-time">
-                        <label for="cook-time">Cook Time <span class="req">*</span> <span
-                                class="opt">(mins)</span></label>
+                        <label for="cook-time">Cook Time <span class="required">*</span> <span
+                                class="optional">(mins)</span></label>
                         <input type="number" id="cook-time" name="cook-time" placeholder="30" min="0" />
                         <span class="error-msg">Required.</span>
                     </div>
 
                     <div class="field" id="field-servings">
-                        <label for="servings">Servings <span class="req">*</span></label>
+                        <label for="servings">Servings <span class="required">*</span></label>
                         <input type="number" id="servings" name="servings" placeholder="4" min="1" />
                         <span class="error-msg">Required.</span>
                     </div>
 
                     <div class="field">
-                        <label for="difficulty">Difficulty <span class="req">*</span></label>
+                        <label for="difficulty">Difficulty <span class="required">*</span></label>
                         <select id="difficulty" name="difficulty">
                             <option value="">Select level…</option>
-                            <option>Easy</option>
-                            <option>Medium</option>
-                            <option>Hard</option>
+                            <option value="easy">Easy</option>
+                            <option value="medium">Medium</option>
+                            <option value="hard">Hard</option>
                         </select>
                     </div>
 
                     <div class="field">
-                        <label for="calories">Calories <span class="opt">(per serving)</span></label>
+                        <label for="calories">Calories <span class="optional">(per serving)</span></label>
                         <input type="number" id="calories" name="calories" placeholder="320" min="0" />
                     </div>
 
                     <div class="field">
-                        <label for="video-link">Video Link <span class="opt">(YouTube)</span></label>
+                        <label for="video-link">Video Link <span class="optional">(YouTube)</span></label>
                         <input type="url" id="video-link" name="video-link"
                             placeholder="https://youtube.com/watch?v=…" />
                     </div>
                 </div>
             </div>
 
-            <!-- ④ INGREDIENTS -->
+            <!-- Ingredients section -->
             <div class="section-card">
                 <div class="section-label">
-                    <div class="section-icon">🥕</div>
+                    <div class="section-icon"><i class="fa-solid fa-carrot fa-lg" style="color: rgb(196, 98, 45);"></i>
+                    </div>
                     <div>
                         <div class="section-title">Ingredients</div>
                         <div class="section-sub">List each ingredient with its quantity</div>
@@ -229,23 +232,24 @@
                     <span class="section-number">04 / 06</span>
                 </div>
 
-                <div class="ing-header">
+                <div class="ingredient-header">
                     <span>Ingredient</span>
                     <span>Quantity</span>
                     <span></span>
                 </div>
                 <div class="ingredients-list" id="ingredients-list"></div>
                 <button type="button" class="btn-add" id="add-ingredient">
-                    <span>＋</span> Add Ingredient
+                    <span>+</span> Add Ingredient
                 </button>
                 <span class="error-msg" id="ing-error" style="display:none; margin-top:8px;">Add at least one
                     ingredient.</span>
             </div>
 
-            <!-- ⑤ STEPS -->
+            <!-- Steps -->
             <div class="section-card">
                 <div class="section-label">
-                    <div class="section-icon">👨‍🍳</div>
+                    <div class="section-icon"><i class="fa-solid fa-fire-burner fa-lg"
+                            style="color: rgb(196, 98, 45);"></i></div>
                     <div>
                         <div class="section-title">Cooking Steps</div>
                         <div class="section-sub">Walk readers through your method step by step</div>
@@ -255,16 +259,17 @@
 
                 <div class="steps-list" id="steps-list"></div>
                 <button type="button" class="btn-add" id="add-step">
-                    <span>＋</span> Add Step
+                    <span>+</span> Add Step
                 </button>
                 <span class="error-msg" id="step-error" style="display:none; margin-top:8px;">Add at least one
                     step.</span>
             </div>
 
-            <!-- ⑥ EXTRAS -->
+            <!-- extra info -->
             <div class="section-card">
                 <div class="section-label">
-                    <div class="section-icon">✨</div>
+                    <div class="section-icon"><i class="fa-solid fa-plus fa-lg" style="color: rgb(196, 98, 45);"></i>
+                    </div>
                     <div>
                         <div class="section-title">Extras</div>
                         <div class="section-sub">Tags and chef's notes</div>
@@ -274,7 +279,7 @@
 
                 <div class="form-grid">
                     <div class="field" style="grid-column: 1 / -1;">
-                        <label>Tags <span class="opt">(press Enter or comma to add)</span></label>
+                        <label>Tags <span class="optional">(press Enter or comma to add)</span></label>
                         <div class="tags-input-wrap">
                             <input type="text" id="tags-input" placeholder="e.g. spicy, quick, healthy, gluten-free" />
                         </div>
@@ -284,7 +289,8 @@
                     </div>
 
                     <div class="field" style="grid-column: 1 / -1;">
-                        <label>Chef's Notes <span class="opt">(optional tips, substitutions, storage)</span></label>
+                        <label>Chef's Notes <span class="optional">(optional tips, substitutions,
+                                storage)</span></label>
                         <textarea id="chef-notes" name="chef-notes"
                             placeholder="Any pro tips? Substitutions? How to store leftovers?"
                             style="min-height:100px;"></textarea>
@@ -292,19 +298,23 @@
                 </div>
             </div>
 
-            <!-- SUBMIT -->
+            <!-- submit form -->
             <div class="submit-area">
                 <button type="submit" class="btn-submit" id="submit-btn">
                     <span class="spinner" id="spinner"></span>
-                    <span id="submit-text">🍽️ Publish Recipe</span>
+                    <span id="submit-text"><i class="fa-solid fa-utensils fa-lg" style="color: rgb(255, 255, 255);"></i> Publish Recipe</span>
                 </button>
                 <button type="button" class="save-draft" id="save-draft">Save as Draft</button>
             </div>
-
-
-
         </form>
     </div>
+
+    <!-- Success Message -->
+    <div class="toast" id="toast">
+        <span class="toast-icon">✅</span>
+        <span id="toast-msg">Recipe published successfully!</span>
+    </div>
+
 
 
 

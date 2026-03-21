@@ -76,10 +76,9 @@ a {
 .navbar-s2 .nav-text {
     font-size: 16px;
 }
-.navbar-s2 button{
+.navbar-s2 div{
     background-color: var(--orange);
     padding: 8px 12px;
-    border: none;
     border-radius: 5px;
     cursor: pointer;
     font-family:'DM Sans', sans-serif;

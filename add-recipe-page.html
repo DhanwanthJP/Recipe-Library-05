@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe Library</title>
-    <link rel="stylesheet" href="add-receipe-page.css">
+    <link rel="stylesheet" href="add-recipe-page.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,49 +19,48 @@
 </head>
 
 <body>
-    <!-- Navbar
+    <!-- Navbar -->
     <div class="navbar">
-        <div class="navbar-s1">
-            <h1>Recipe Library</h1>
-        </div>
+        <a href="./homepage.html">
+            <div class="navbar-s1">
+                <div class="nav-icon"><i class="fa-solid fa-utensils fa-md" style="color: var(--background1);"></i>
+                </div>
+                <h1>Recipe <span>Library</span></h1>
+            </div>
+        </a>
 
         <div class="navbar-s2">
-            <a href="">
-                <p>Home</p>
+            <a href="./homepage.html">
+                <p class="nav-text">Home</p>
             </a>
             <a href="">
-                <p>Browse</p>
+                <p class="nav-text">Recipes</p>
             </a>
-            <button><a href="">Add Recipe</a></button>
+            <button><a href="">
+                    <p class="nav-text">Add Recipe</p>
+                </a></button>
+            <a href="">
+                <i class="fa-solid fa-circle-user fa-2xl" style="color: rgb(92, 74, 42);"></i>
+            </a>
         </div>
-        <div class="navbar-s3">
-        </div>
-    </div> -->
+    </div>
 
+    <!-- Header -->
     <div class="header">
         <p class="header_caption1">Share your recipe with the world</p>
         <p class="header_caption2">Fill in the details below - the more you add, the better others can recreate your
             dish.</p>
     </div>
 
+    <!-- Main content -->
     <div class="main-container">
-        <!-- form progress -->
-        <div class="progress">
-            <p class="progress-label">Form completion</p>
-            <div class="progress-bar-track">
-                <div class="progress-bar-fill"></div>
-            </div>
-            <p class="progress-percentage">0%</p>
-        </div>
-
         <form id="recipe-form" novalidate>
-
-
             <!-- Recipe Info -->
             <div class="section-card">
                 <div class="section-label">
                     <div class="section-icon"><i class="fa-solid fa-circle-info fa-lg"
-                            style="color: rgb(196, 98, 45);"></i></div>
+                            style="color: rgb(196, 98, 45);"></i>
+                    </div>
                     <div>
                         <div class="section-title">Recipe Info</div>
                         <div class="section-sub">Name, image and a short description</div>
@@ -88,7 +87,7 @@
                         </div>
                         <img id="image-preview" alt="Preview" />
                         <div class="url-toggle" id="url-toggle">
-                            <span>🔗</span> Or paste an image URL instead
+                            Or paste an image URL instead
                         </div>
                         <div id="image-url-field">
                             <input type="url" id="image-url" name="image-url"
@@ -99,7 +98,8 @@
                     <div class="field" id="field-desc">
                         <label>Short Description<span class="required">*</span></label>
                         <textarea name="recipe-desc" id="recipe-desc"
-                            placeholder="Example: A quick, flavourful dish that.. (max 200 characters)"></textarea>
+                            placeholder="Example: A quick, flavourful dish that.. (max 200 characters)"
+                            maxlength="200"></textarea>
                         <div class="char-counter"><span id="desc-count">0</span> / 200</div>
                         <span class="error-msg">Please add a short description.</span>
                     </div>
@@ -122,12 +122,12 @@
                     <div class="field" id="field-category">
                         <label>Category <span class="required">*</span></label>
                         <div class="radio-group" id="category-group">
-                            <label class="radio-option radio-veg" id="optional-veg">
+                            <label class="radio-option radio-veg" id="opt-veg">
                                 <input type="radio" name="category" value="veg" />
                                 <div class="radio-dot"></div>
                                 <span class="radio-label">Vegetarian</span>
                             </label>
-                            <label class="radio-option radio-non-veg" id="optional-nonveg">
+                            <label class="radio-option radio-non-veg" id="opt-nonveg">
                                 <input type="radio" name="category" value="non-veg" />
                                 <div class="radio-dot"></div>
                                 <span class="radio-label">Non-Vegetarian</span>
@@ -249,7 +249,8 @@
             <div class="section-card">
                 <div class="section-label">
                     <div class="section-icon"><i class="fa-solid fa-fire-burner fa-lg"
-                            style="color: rgb(196, 98, 45);"></i></div>
+                            style="color: rgb(196, 98, 45);"></i>
+                    </div>
                     <div>
                         <div class="section-title">Cooking Steps</div>
                         <div class="section-sub">Walk readers through your method step by step</div>
@@ -279,12 +280,10 @@
 
                 <div class="form-grid">
                     <div class="field" style="grid-column: 1 / -1;">
-                        <label>Tags <span class="optional">(press Enter or comma to add)</span></label>
+                        <label>Tags </label>
                         <div class="tags-input-wrap">
                             <input type="text" id="tags-input" placeholder="e.g. spicy, quick, healthy, gluten-free" />
                         </div>
-                        <div class="tags-display" id="tags-display"></div>
-                        <input type="hidden" id="tags-hidden" name="tags" />
                         <p class="hint">Tags help others discover your recipe.</p>
                     </div>
 
@@ -302,12 +301,14 @@
             <div class="submit-area">
                 <button type="submit" class="btn-submit" id="submit-btn">
                     <span class="spinner" id="spinner"></span>
-                    <span id="submit-text"><i class="fa-solid fa-utensils fa-lg" style="color: rgb(255, 255, 255);"></i> Publish Recipe</span>
+                    <span id="submit-text"><i class="fa-solid fa-utensils fa-lg" style="color: rgb(255, 255, 255);"></i>
+                        Publish Recipe</span>
                 </button>
                 <button type="button" class="save-draft" id="save-draft">Save as Draft</button>
             </div>
         </form>
     </div>
+
 
     <!-- Success Message -->
     <div class="toast" id="toast">
@@ -317,7 +318,7 @@
 
 
 
-
+    <script src="add-recipe-page.js"></script>
 </body>
 
 </html>

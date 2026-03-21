@@ -10,21 +10,46 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gabarito&family=Story+Script&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="homepage.css">
     <link rel="stylesheet" href="style.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DynaPuff:wght@400..700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 
 <body>
     <div class="container">
-        <!-- Nav bar -->
+        <!-- Navbar -->
         <div class="navbar">
-            <h1>Recipe Library</h1>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="recipes.html">Recipes</a></li>
-                <li><a href="add-recipe.html">Add Recipe</a></li>
-            </ul>
+            <a href="./homepage.html">
+                <div class="navbar-s1">
+                    <div class="nav-icon"><i class="fa-solid fa-utensils fa-md" style="color: var(--background1);"></i>
+                    </div>
+                    <h1>Recipe <span>Library</span></h1>
+                </div>
+            </a>
+
+            <div class="navbar-s2">
+                <button><a href="./homepage.html">
+                    <p class="nav-text-current">Home</p>
+                </a></button>
+                <a href="">
+                    <p class="nav-text">Recipes</p>
+                </a>
+                <a href="./add-recipe-page.html">
+                        <p class="nav-text">Add Recipe</p>
+                    </a>
+                <a href="">
+                    <i class="fa-solid fa-circle-user fa-2xl" style="color: rgb(92, 74, 42);"></i>
+                </a>
+            </div>
         </div>
 
         <!-- Floating Search bar -->
@@ -64,52 +89,52 @@
 
                 <div class="slider" id="slider">
                     <div class="recipe-card">
-                    <img src="./Images/popular-dish-card-1.jpg">
-                    <h3>Creamy Cheese Cake</h3>
-                    <button class="recipe-card-btn">View Recipe</button>
-                </div>
+                        <img src="./Images/popular-dish-card-1.jpg">
+                        <h3>Creamy Cheese Cake</h3>
+                        <button class="recipe-card-btn">View Recipe</button>
+                    </div>
 
-                <div class="recipe-card">
-                    <img src="./Images/popular-dish-card-2.jpg">
-                    <h3>Hyderabadi Briyani</h3>
-                    <button class="recipe-card-btn">View Recipe</button>
-                </div>
+                    <div class="recipe-card">
+                        <img src="./Images/popular-dish-card-2.jpg">
+                        <h3>Hyderabadi Briyani</h3>
+                        <button class="recipe-card-btn">View Recipe</button>
+                    </div>
 
-                <div class="recipe-card">
-                    <img src="./Images/popular-dish-card-3.jpg">
-                    <h3>Mysore Nei Dosa</h3>
-                    <button class="recipe-card-btn">View Recipe</button>
-                </div>
+                    <div class="recipe-card">
+                        <img src="./Images/popular-dish-card-3.jpg">
+                        <h3>Mysore Nei Dosa</h3>
+                        <button class="recipe-card-btn">View Recipe</button>
+                    </div>
 
-                <div class="recipe-card">
-                    <img src="./Images/popular-dish-card-4.jpg">
-                    <h3>Traditional Onam Sadhya</h3>
-                    <button class="recipe-card-btn">View Recipe</button>
-                </div>
+                    <div class="recipe-card">
+                        <img src="./Images/popular-dish-card-4.jpg">
+                        <h3>Traditional Onam Sadhya</h3>
+                        <button class="recipe-card-btn">View Recipe</button>
+                    </div>
 
-                <div class="recipe-card">
-                    <img src="./Images/popular-dish-card-5.jpg">
-                    <h3>Paneer butter masala</h3>
-                    <button class="recipe-card-btn">View Recipe</button>
-                </div>
+                    <div class="recipe-card">
+                        <img src="./Images/popular-dish-card-5.jpg">
+                        <h3>Paneer butter masala</h3>
+                        <button class="recipe-card-btn">View Recipe</button>
+                    </div>
 
-                <div class="recipe-card">
-                    <img src="./Images/popular-dish-card-6.jpg">
-                    <h3>Grilled salmon</h3>
-                    <button class="recipe-card-btn">View Recipe</button>
-                </div>
+                    <div class="recipe-card">
+                        <img src="./Images/popular-dish-card-6.jpg">
+                        <h3>Grilled salmon</h3>
+                        <button class="recipe-card-btn">View Recipe</button>
+                    </div>
 
-                <div class="recipe-card">
-                    <img src="./Images/popular-dish-card-7.jpg">
-                    <h3>Pancakes</h3>
-                    <button class="recipe-card-btn">View Recipe</button>
-                </div>
+                    <div class="recipe-card">
+                        <img src="./Images/popular-dish-card-7.jpg">
+                        <h3>Pancakes</h3>
+                        <button class="recipe-card-btn">View Recipe</button>
+                    </div>
 
-                <div class="recipe-card">
-                    <img src="./Images/popular-dish-card-8.jpg">
-                    <h3>Lamb Chops</h3>
-                    <button class="recipe-card-btn">View Recipe</button>
-                </div>
+                    <div class="recipe-card">
+                        <img src="./Images/popular-dish-card-8.jpg">
+                        <h3>Lamb Chops</h3>
+                        <button class="recipe-card-btn">View Recipe</button>
+                    </div>
                 </div>
 
                 <button class="slider-btn right" onclick="slideRight()">❯</button>
@@ -149,7 +174,7 @@
             </div>
         </section>
 
-        <script src="script.js"></script>
+        <script src="homepage.js"></script>
 
     </div>
 </body>

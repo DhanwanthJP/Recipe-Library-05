@@ -47,7 +47,9 @@ a {
     height: 68px;
     box-shadow: 0 2px 16px rgba(26,18,8,0.06);
   }
-
+#navbar-menu{
+    display: none;
+}
 .navbar-s1{
     display: flex;
     gap: 8px;
@@ -59,7 +61,7 @@ a {
     letter-spacing: -0.3px;
 }
 .nav-icon{
-    width: 38px; height: 38px;
+    min-width: 38px; height: 38px;
     background: var(--orange);
     border-radius: 10px;
     display: flex; align-items: center; justify-content: center;
@@ -76,10 +78,9 @@ a {
 .navbar-s2 .nav-text {
     font-size: 16px;
 }
-.navbar-s2 button{
+.navbar-s2 div{
     background-color: var(--orange);
     padding: 8px 12px;
-    border: none;
     border-radius: 5px;
     cursor: pointer;
     font-family:'DM Sans', sans-serif;
@@ -92,6 +93,43 @@ a {
     letter-spacing: 0.5px;
     color: var(--background2);
     font-weight: 500;
+}
+#showAt700{
+    display: none;
+}
+/* Side Navbar */
+#sideNav {
+    position: fixed;
+    z-index: 110;
+    top: 0;
+    left: 0;
+    background-color: var(--background1);
+    transition-property: all;
+    transition-duration: 300ms;
+    padding: 15px;
+    transition-timing-function: ease-in-out;
+}
+
+#sideNav-s1 {
+    display: flex;
+    padding: 1.5rem 1rem;
+    justify-content: space-between;
+    align-items: baseline;
+    text-align: center;
+}
+#sideNav-s2{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 20px;
+    gap: 10px;
+}
+
+#sideNav-close {
+    position: absolute;
+    right: 15px;
+    top: 30px;
+    cursor: pointer;
 }
 
 /* Header */
@@ -693,6 +731,21 @@ textarea {
     letter-spacing: 1px;
     padding:0 10px;
 }
+
+.navbar-s2{
+    display: none;
+}
+#showAt700{
+    display: block;
+}
+#navbar-menu{
+    display: block;
+}
+.navbar-s1{
+    font-size: 0.80rem;
+    font-weight: 600;
+}
+
 }
 
 @media (max-width: 600px) {

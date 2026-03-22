@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Recipe</title>
+
+    <link rel="stylesheet" href="favourites.css">
+    <link rel="stylesheet" href="../style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DynaPuff:wght@400..700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div id="navbar-menu">
+            <i class="fa-solid fa-bars fa-xl" style="color: #5c4a2a;"></i>
+        </div>
+        <a href="./homepage.html">
+            <div class="navbar-s1">
+                <div class="nav-icon"><i class="fa-solid fa-utensils fa-md" style="color: var(--background1);"></i>
+                </div>
+                <h1>Recipe <span>Library</span></h1>
+            </div>
+        </a>
+
+        <div class="navbar-s2">
+            <a href="../homepage.html">
+                <p class="nav-text">Home</p>
+            </a>
+            <a href="">
+                <p class="nav-text">Recipes</p>
+            </a>
+            <a href="../add-recipe-page.html">
+                <p class="nav-text">Add Recipe</p>
+            </a>
+            <a href="./favourites.html">
+                <i class="fa-solid fa-circle-user fa-2xl" style="color: #c4622d;"></i>
+            </a>
+        </div>
+
+        <a id="showAt700" href="favourite-page/favourites.html">
+            <i class="fa-solid fa-circle-user fa-2xl" style="color: rgb(92, 74, 42);"></i>
+        </a>
+    </div>
+
+    <!-- Side Nav -->
+    <nav id="sideNav" style="width: 40%;height: 100vh;margin-left: -50%;">
+        <a href="../homepage.html">
+            <div class="navbar-s1">
+                <div class="nav-icon"><i class="fa-solid fa-utensils fa-md" style="color: var(--background1);"></i>
+                </div>
+                <h1>Recipe <span>Library</span></h1>
+            </div>
+        </a>
+        <i id="sideNav-close" class="fa-solid fa-xmark" style="color: rgb(0, 0, 0)"></i>
+        <div id="sideNav-s2">
+            <a href="../homepage.html">
+                <p class="nav-text">Home</p>
+            </a>
+            <a href="">
+                <p class="nav-text">Recipes</p>
+            </a>
+            <div><a href="../add-recipe-page.html">
+                    <p class="nav-text">Add Recipe</p>
+                </a></div>
+        </div>
+    </nav>
+
+
+    <header>
+        <h1>Favorite Recipe</h1>
+        <div class="profile-hole">
+            <div class="profile-card">
+                <div class="profile-content">
+                    <div class="profile-picture">
+                        <img src="favourite-image.jpg" alt="">
+                    </div>
+                    <h2 class="profile-name">Food Recipes</h2>
+                    <p class="profile-description">
+                        “Cooking is all about people. Food is maybe the only universal thing that really has the power
+                        to bring everyone together. No matter what culture, everywhere around the world, people get
+                        together to eat.”
+                    </p>
+                    <p>Email : Foodrecipes@gmail.com</p>
+                    <p>Contact : 9595952527
+                    <ul class="social-icons">
+                        <li>
+                            <a href="#" style="--color: #1da1f2;">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" style="--color: #1877f2;">
+                                <i class="fa-solid fa-at"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" style="--color: white;">
+                                <i class="fa-brands fa-square-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="search bar">
+            <input type="text" id="search-input" placeholder="Enter an ingrediant">
+            <button id="search-btn">Search</button>
+        </div>
+    </header>
+    <main>
+        <div id="meal-list" class="meal-list">
+        </div>
+    </main>
+    <script src="favourites.js"></script>
+    <script src="../script.js"></script>
+</body>
+
+</html>

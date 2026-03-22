@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Library</title>
+  <link rel="stylesheet" href="search-recipe.css">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Gabarito&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div id="navbar-menu">
+      <i class="fa-solid fa-bars fa-xl" style="color: #5c4a2a;"></i>
+    </div>
+    <a href="../homepage.html">
+      <div class="navbar-s1">
+        <div class="nav-icon"><i class="fa-solid fa-utensils fa-md" style="color: var(--background1);"></i>
+        </div>
+        <h1>Recipe <span>Library</span></h1>
+      </div>
+    </a>
+
+    <div class="navbar-s2">
+      <div><a href="../homepage.html">
+          <p class="nav-text-current">Home</p>
+        </a></div>
+      <a href="">
+        <p class="nav-text">Recipes</p>
+      </a>
+      <a href="../add-recipe-page.html">
+        <p class="nav-text">Add Recipe</p>
+      </a>
+      <a href="./favourite-page/favourites.html">
+        <i class="fa-solid fa-circle-user fa-2xl" style="color: rgb(92, 74, 42);"></i>
+      </a>
+    </div>
+    <a id="showAt700" href="../favourite-page/favourites.html">
+      <i class="fa-solid fa-circle-user fa-2xl" style="color: rgb(92, 74, 42);"></i>
+    </a>
+  </div>
+
+  <!-- Side Nav -->
+  <nav id="sideNav" style="width: 40%;height: 100vh;margin-left: -50%;">
+    <a href="../homepage.html">
+      <div class="navbar-s1">
+        <div class="nav-icon"><i class="fa-solid fa-utensils fa-md" style="color: var(--background1);"></i>
+        </div>
+        <h1>Recipe <span>Library</span></h1>
+      </div>
+    </a>
+    <i id="sideNav-close" class="fa-solid fa-xmark" style="color: rgb(0, 0, 0)"></i>
+    <div id="sideNav-s2">
+      <a href="../homepage.html">
+        <p class="nav-text">Home</p>
+      </a>
+      <a href="">
+        <p class="nav-text">Recipes</p>
+      </a>
+      <div><a href="./add-recipe-page.html">
+          <p class="nav-text">Add Recipe</p>
+        </a></div>
+    </div>
+  </nav>
+
+  <div class="HEADING">
+    <h1>OUR'S CHOICE</h1>
+    <div class="btn">
+      <i class="fa-solid fa-bars" style="color: rgb(12, 33, 2);"></i>
+    </div>
+  </div>
+
+
+  <div class="containers">
+    <div class="filters">
+      <h3>CUISINES :</h3>
+      <label>
+        <input type="checkbox" value="INDIAN">INDIAN<br>
+      </label>
+      <label>
+        <input type="checkbox" value="CHINESE">CHINESE<br>
+      </label>
+      <label>
+        <input type="checkbox" value="ITALIAN">ITALIAN<br>
+      </label>
+
+
+      <h3>CATEGORY :</h3>
+      <label>
+        <input type="checkbox" value="BREAKFAST">BREAKFAST<br>
+      </label>
+      <label>
+        <input type="checkbox" value="LUNCH">LUNCH<br>
+      </label>
+      <label>
+        <input type="checkbox" value="DINNER">DINNER<br>
+      </label>
+      <label>
+        <input type="checkbox" value="SNACK">SNACK<br>
+      </label>
+      <label>
+        <input type="checkbox" value="DESSERT">DESSERT<br>
+      </label>
+
+
+      <h3>VEG/NON-VEG :</h3>
+      <label><input type="radio" name="vegan" value="VEG">VEG</label>
+      <label>
+
+        <input type="radio" name="vegan" value="NON-VEG">NON-VEG
+      </label>
+
+
+    </div>
+
+
+
+
+
+    <div class="recipes">
+      <div class="card" data-category="INDIAN DINNER NON-VEG">
+        <img src="./projectimages/chicken burger.jpg">
+        <div class="cardcontent">
+          <h3>SPICY CHICKEN BURGER</h3>
+          <div class="cardinfo">
+
+
+
+            <p>. 30min</p>
+            <p>. DINNER</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-category="INDIAN DINNER NON-VEG">
+        <img src="./projectimages/chicken grilled gravy.jpg" alt="">
+        <div class="cardcontent">
+          <h3>GRILLED GRAVY</h3>
+          <div class="cardinfo">
+            <p>. 30min</p>
+            <p>. DINNER</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card" data-category="INDIAN DINNER NON-VEG">
+        <img src="./projectimages/grilled chicken.jpg">
+        <div class="cardcontent">
+          <h3> INDIAN GRILLED CHICKEN</h3>
+          <div class="cardinfo">
+            <p>. 40min</p>
+            <p>. DINNER</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card" data-category="CHINESE DESSERT VEG">
+        <img src="./projectimages/pancakes.jpg" alt="">
+        <div class="cardcontent">
+          <h3> CHINESE PANCAKES</h3>
+          <div class="cardinfo">
+            <p>. 25 min</p>
+            <p>. DESSERT</p>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="card" data-category="INDIAN DINNER VEG">
+        <img src="./projectimages/panner noodels (1).jpg ">
+        <div class="cardcontent">
+          <h3>PANNER NOODLES</h3>
+          <div class="cardinfo">
+            <p>. 15min</p>
+            <p>. DINNER</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card" data-category="INDIAN DINNER NON-VEG">
+        <img src="./projectimages/sprot salad (1).jpg ">
+        <div class="cardcontent">
+          <h3>CHICKEN PIZZA</h3>
+          <div class="cardinfo">
+            <p>. 30min</p>
+            <p>. DINNER</p>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="card" data-category="CHINESE LUNCH VEG">
+        <img src="./projectimages/vggie gravy.jpg" alt="">
+        <div class="cardcontent">
+          <h3> CHINESE VEGGIES GRAVY</h3>
+          <div class="cardinfo">
+            <p>. 35min</p>
+            <p>. LUNCH</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card" data-category="INDIAN LUNCH VEG">
+        <img src="./projectimages/sprouted.jpg" alt="">
+        <div class="cardcontent">
+          <h3>BROCOLI SALAD</h3>
+          <div class="cardinfo">
+            <p>. 20min</p>
+            <p>. LUNCH</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card" data-category="INDIAN LUNCH VEG">
+        <img src="./projectimages/spimach.jpg" alt="">
+        <div class="cardcontent">
+          <h3>POTATOE FRY</h3>
+          <div class="cardinfo">
+            <p>. 10min</p>
+            <p>. LUNCH</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card" data-category="INDIAN BREAKFAST VEG">
+        <img src="./projectimages/sprouted.jpg" alt="">
+        <div class="cardcontent">
+          <h3>SPROUTED SALAD</h3>
+          <div class="cardinfo">
+            <p>. 10min</p>
+            <p>. BREAKFAST</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card" data-category="INDIAN DINNER VEG">
+        <img src="./projectimages/musroom.jpg" alt="">
+        <div class="cardcontent">
+          <h3>MUSHROOM RICE</h3>
+          <div class="cardinfo">
+            <p>. 20min</p>
+            <p>. DINNER</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card" data-category="INDIAN SNACK VEG ">
+        <img src="./projectimages/momosss.jpg" alt="">
+        <div class="cardcontent">
+          <h3>MOMOS</h3>
+          <div class="cardinfo">
+            <p>. 30min</p>
+            <p>. SNACK</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card" data-category="INDIAN DINNER VEG">
+        <img src="./projectimages/pizaaa veggg.jpg" alt="">
+        <div class="cardcontent">
+          <h3>PIZZA VEG</h3>
+          <div class="cardinfo">
+            <p>. 30min</p>
+            <p>. DINNER</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card" data-category="ITALIAN LUNCH VEG">
+        <img src="./projectimages/ITALYP.jpg">
+        <div class="cardcontent">
+          <h3>ITALIAN GRAVY</h3>
+          <div class="cardinfo">
+            <p>. 30min</p>
+            <p>. LUNCH</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card" data-category="ITALIAN SNACK VEG">
+        <img src="./projectimages/PASTA.jpg">
+        <div class="cardcontent">
+          <h3>ITALIAN PASTA</h3>
+          <div class="cardinfo">
+            <p>. 30min</p>
+            <p>. SNACK</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card" data-category="INDIAN BREAKFAST NON-VEG">
+        <img src="./projectimages/ITALY.jpg">
+        <div class="cardcontent">
+          <h3>STUFFED OMELETE</h3>
+          <div class="cardinfo">
+            <p>. 10min</p>
+            <p>. BREAKFAST</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  </div>
+
+
+
+  <script src="search-recipe.js">
+
+  </script>
+  <script src="../script.js"></script>
+
+
+</body>
+
+
+</html>

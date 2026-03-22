@@ -1,0 +1,165 @@
+body{
+    font-family: 'Gabarito',sans-serif;
+    background-color: orange;
+}
+
+.filters{
+    border-radius: 20px;
+    padding: 10px;
+    background-color:whitesmoke;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+   height: 100%;
+   position: sticky;
+   top:0 ;
+   margin-top: 5px;
+ 
+    font-weight: bold;
+    color:black;
+   
+}
+.btn{
+    display: none;
+}
+.HEADING{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+    background-color:whitesmoke;
+    border-radius: 10px;
+    padding: 10px;
+}
+.HEADING h1{
+    padding: 5x;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+.filters h3{
+    color:BLACK;
+} 
+.filters label{
+    color:BLACK;
+}
+.containers{
+    display: flex;
+     
+}
+.cardcontent h3{
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+.cardcontent{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.card{
+    background-color:whitesmoke;
+    border-radius: 18px;
+    width: 250px;
+    height: 350px;
+}
+.cardinfo{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    margin-top: -20PX;
+}
+
+.recipes p{
+    font-size: medium;
+    font-weight: bold;
+}
+.recipes img{
+    
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+   
+}
+.recipes img:hover{
+    cursor: pointer;
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 23px rgba(0,0,0  ,0.3);
+   
+}
+.recipes{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+   
+    padding: 10px;
+    
+    gap: 10px;
+   
+   
+    
+
+}
+.recipes h3,p{
+    text-align: center;
+}
+.cuisines{
+    background-color: white;
+    height:150px;
+    width: 150px;
+}
+
+@media(max-width:1200px)
+{
+    .card{
+        width:230px ;
+    }
+    .recipes{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        margin: 0 auto;
+        padding: 10px;
+        max-width: 700px;
+       
+    }
+    .recipes img{
+        width: 100%;
+        height: 200px;
+    }
+    
+        
+    .filters{
+        display: none;
+    }
+    .btn{
+        display: block;
+    }
+}
+@media(max-width:700px)
+{
+    .card{
+        width:220px ;
+
+    }
+    .recipes{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        margin: 0 auto;
+        padding: 10px;
+        max-width: 700px;
+       
+    }
+    .recipes img{
+        width: 100%;
+        height: 200px;
+    }
+    
+        
+    .filters{
+        display: none;
+    }
+    .btn{
+        display: block;
+    }
+}
+

@@ -1,3 +1,3 @@
 function goBack() {
-  window.location.href = "recipes.html";
+  window.location.href = "../../search-recipe/search-recipe.html";
 }

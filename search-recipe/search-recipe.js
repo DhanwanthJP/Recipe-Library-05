@@ -53,3 +53,61 @@ function filterCards() {
     }
   });
 }
+
+
+
+const recipe1 = document.getElementById("recipe-1");
+const recipe2 = document.getElementById("recipe-2");
+const recipe3 = document.getElementById("recipe-3");
+const recipe4 = document.getElementById("recipe-4");
+const recipe5 = document.getElementById("recipe-5");
+const recipe6 = document.getElementById("recipe-6");
+const recipe7 = document.getElementById("recipe-7");
+const recipe8 = document.getElementById("recipe-8");
+const recipe9 = document.getElementById("recipe-9");
+const recipe10 = document.getElementById("recipe-10");
+const recipe15 = document.getElementById("recipe-15");
+const recipe16 = document.getElementById("recipe-16");
+
+recipe1.addEventListener("click", function(){
+window.location.href = "../recipe-details/chickenPizza/SpicyBurgerChicken.html";
+})
+recipe2.addEventListener("click", function(){
+window.location.href = "../recipe-details/chickenPizza/grilledGravy.html";
+})
+recipe3.addEventListener("click", function(){
+window.location.href = "../recipe-details/chickenPizza/indianGrilledChicken.html";
+})
+recipe4.addEventListener("click", function(){
+window.location.href = "../recipe-details/chickenPizza/chickenPizza.html";
+})
+
+recipe5.addEventListener("click", function(){
+window.location.href = "../recipe-details/chickenPizza/pannerNoodles.html";
+})
+recipe6.addEventListener("click", function(){
+window.location.href = "../recipe-details/chickenPizza/chickenPizza.html";
+})
+recipe7.addEventListener("click", function(){
+window.location.href = "../recipe-details/chickenPizza/chineseVegGravy.html";
+})
+recipe8.addEventListener("click", function(){
+window.location.href = "../recipe-details/chickenPizza/chickenPizza.html";
+})
+recipe9.addEventListener("click", function(){
+window.location.href = "../recipe-details/chickenPizza/potatoFry.html";
+})
+recipe10.addEventListener("click", function(){
+window.location.href = "../recipe-details/chickenPizza/sproutedSalad.html";
+})
+recipe15.addEventListener("click", function(){
+window.location.href = "../recipe-details/chickenPizza/pasta.html";
+})
+recipe16.addEventListener("click", function(){
+window.location.href = "../recipe-details/chickenPizza/stuffedOmelette.html";
+})
+
+
+
+
+

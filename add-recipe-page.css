@@ -100,13 +100,13 @@ a {
 /* Side Navbar */
 #sideNav {
     position: fixed;
-    z-index: 10;
+    z-index: 110;
     top: 0;
     left: 0;
-    background-color: var(--primary-color);
+    background-color: var(--background1);
     transition-property: all;
     transition-duration: 300ms;
-
+    padding: 15px;
     transition-timing-function: ease-in-out;
 }
 
@@ -117,34 +117,18 @@ a {
     align-items: baseline;
     text-align: center;
 }
-
-#sideNav-s1 h3 {
-    color: var(--tertiary-color);
-}
-
-#sideNav-list {
+#sideNav-s2{
     display: flex;
     flex-direction: column;
-    list-style: none;
-    justify-content: flex-start;
-    gap: 1.5rem;
-    letter-spacing: 1px;
-    padding: 0rem 2rem;
-}
-
-#sideNav-list a {
-    color: var(--secondary-color);
-    font-size: 14px;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 500;
-}
-
-#sideNav-list a:hover {
-    color: var(--tertiary-color);
-    border-bottom: 1px solid var(--secondary-color);
+    margin-top: 20px;
+    margin-left: 20px;
+    gap: 10px;
 }
 
 #sideNav-close {
+    position: absolute;
+    right: 15px;
+    top: 30px;
     cursor: pointer;
 }
 
